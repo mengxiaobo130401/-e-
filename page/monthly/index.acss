@@ -1,0 +1,167 @@
+ .month_banner {
+   position: relative;
+   font-size: 30px;
+   width: calc(100vw);
+   height: 600px;
+   color: #fff;
+ }
+
+ .monthly_banner {
+   width: 100%;
+   height: 600px;
+ }
+
+ .month_banner_text {
+   position: absolute;
+   top: 40px;
+   width: calc(100vw);
+   text-align: center;
+ }
+
+ .month_banner_text_font {
+   font-size: 26px;
+ }
+
+ .month_bg {
+   height: 100%;
+   background: url("https://demo.nits.chnnice.com/folk/image/bg_lanse.png") repeat 0 100%;
+ }
+
+ .div_body {
+   width: calc(100vw);
+ }
+
+ .comm_div {
+   font-size: 24px;
+   color: #fff;
+ }
+
+ .comm_div_title {
+   width: calc(100vw - 20px);
+   padding: 40px 0 20px;
+ }
+
+ .h3 {
+   font-size: 36px;
+   margin-right: 10px;
+   vertical-align: middle;
+ }
+
+ .across {
+   border-bottom: 1px solid #5383DD;
+ }
+
+ .vertical {
+   border-left: 1px solid #5383DD;
+ }
+
+ .defaulColor {
+   color: #F3F30C;
+ }
+
+ .addColor {
+   color: #11BE91;
+ }
+
+ .removeColor {
+   color: #FB404D;
+ }
+
+ .footer {
+   margin-bottom: 50px;
+ }
+
+ .thr {
+   text-align: right;
+ }
+
+ .comm_ovoverflow {
+   width: calc(100vw - 20px);
+   overflow: auto;
+   padding: 10px;
+ }
+
+ .tables {
+   display: inline-flex;
+   flex-direction: column;
+   font-size: 30rpx;
+   border-bottom: 0;
+ }
+
+ .table_header {
+   display: inline-flex;
+ }
+
+ .ths {
+   display: flex;
+   flex-direction: column;
+   height: 80rpx;
+   background: #3B6ECD;
+   color: #ACC9FA;
+   justify-content: center;
+   overflow-x: auto;
+   padding: 0 6rpx;
+ }
+
+ .table_main {
+   display: inline-flex;
+   flex-direction: row;
+ }
+
+ .tds {
+   display: flex;
+   flex-direction: column;
+   height: 80rpx;
+   background: #3B6ECD;
+   color: #ACC9FA;
+   justify-content: center;
+   padding: 0 6rpx;
+ }
+
+ .radius_letT {
+   border-radius: 20rpx 0 0 0
+ }
+
+ .radius_rigT {
+   border-radius: 0 20rpx 0 0
+ }
+
+ .radius_letB {
+   border-radius: 0 0 0 20rpx
+ }
+
+ .radius_rigB {
+   border-radius: 0 0 20rpx 0
+ }
+
+ .vertical {
+   border-left: 1rpx solid #5383DD;
+ }
+
+ .wid171 {
+   width: 171rpx;
+ }
+
+ .wid224 {
+   width: 224rpx;
+ }
+
+ .wid262 {
+   width: 262rpx;
+ }
+
+ .wid145 {
+   width: 145rpx;
+ }
+
+ .wid141 {
+   width: 141rpx;
+ }
+
+ .wid129 {
+   width: 129rpx;
+ }
+
+ .wid70 {
+   width: 70rpx;
+ }

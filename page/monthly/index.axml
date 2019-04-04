@@ -1,0 +1,686 @@
+<view>
+  <view class="month_banner">
+    <image class="monthly_banner" src="{{monthly_banner}}">
+    </image>
+    <view class="month_banner_text">
+      <view>纳思书院
+      </view>
+      <view class="month_banner_text_font">         {{campusList[campus]}}校区        
+      </view>
+      <view style="font-size:24px">           {{year}}年{{month}}月报告 {{campus}}       
+      </view>
+    </view>
+  </view>
+  <view class="div_body month_bg">
+    <view class="comm_ovoverflow">
+      <view class="comm_div">
+        <view class="comm_div_title">
+          <text class="h3">01
+          </text>数据总览        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths radius_letT wid70">
+              <view class="centerclass cell_label ">项目
+              </view>
+            </view>
+            <view class="ths thr vertical wid70">
+              <view class="centerclass cell_label ">人数
+              </view>
+            </view>
+            <view class="ths thr vertical wid224">
+              <view class="centerclass cell_label">金额
+              </view>
+            </view>
+            <view class="ths thr vertical wid141">
+              <view class="centerclass cell_label">同比
+              </view>
+            </view>
+            <view class="ths thr vertical radius_rigT wid141">
+              <view class="centerclass cell_label">环比
+              </view>
+            </view>
+          </view>
+          <block>
+            <view class="table_main across">
+              <view class="tds wid70">
+                <view class="cell_label centerclass">新签
+                </view>
+              </view>
+              <view class="tds tdr vertical wid70">
+                <view class="defaulColor ">{{data.s_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid224">
+                <view class="defaulColor">{{data.s_new_sign_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141">
+                <view class="defaulColor ">{{data.s_xinqian_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141">
+                <view class="defaulColor ">{{data.s_xinqian_huanbi_add_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid70">
+                <view class="cell_label centerclass">续费
+                </view>
+              </view>
+              <view class="tds tdr vertical wid70">
+                <view class="defaulColor">{{data.xf_renewal_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid224">
+                <view class="defaulColor">{{data.xf_renewal_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141">
+                <view class="defaulColor">{{data.s_xufei_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141">
+                <view class="defaulColor">{{data.s_xufei_huanbi_add_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid70">
+                <view class="cell_label centerclass">实收
+                </view>
+              </view>
+              <view class="tds tdr vertical wid70">
+                <view class="defaulColor">{{data.s_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid224">
+                <view class="defaulColor">{{data.s_pay_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141 ">
+                <view class="defaulColor">{{data.s_shishou_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141 ">
+                <view class="defaulColor">{{data.s_shishou_huanbi_add_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid70">
+                <view class="cell_label centerclass">退费
+                </view>
+              </view>
+              <view class="tds tdr vertical wid70">
+                <view class="defaulColor">{{data.s_refund_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid224">
+                <view class="defaulColor">{{data.s_refund_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141 ">
+                <view class="defaulColor">{{data.s_tuifei_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141 ">
+                <view class="defaulColor">{{data.s_tuifei_huanbi_add_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main">
+              <view class="tds  radius_letB wid70">
+                <view class="cell_label centerclass">净收
+                </view>
+              </view>
+              <view class="tds tdr vertical wid70">
+                <view class="defaulColor">{{data.s_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid224">
+                <view class="defaulColor">{{data.s_net_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141 ">
+                <view class="defaulColor">{{data.s_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid141 radius_rigB">
+                <view class="defaulColor">{{data.s_huanbi_add_rate}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="comm_ovoverflow">
+      <view class="comm_div">
+        <view class="comm_div_title">
+          <text class="h3">02
+          </text>课时数据        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths thr radius_letT wid145">
+              <view class="centerclass cell_label ">项目
+              </view>
+            </view>
+            <view class="ths thr vertical wid171">
+              <view class="centerclass cell_label ">1v1
+              </view>
+            </view>
+            <view class="ths thr vertical wid171">
+              <view class="centerclass cell_label">1v多
+              </view>
+            </view>
+            <view class="ths thr vertical radius_rigT wid171">
+              <view class="centerclass cell_label">总
+              </view>
+            </view>
+          </view>
+          <block>
+            <view class="table_main across">
+              <view class="tds tdr wid145">
+                <view class="cell_label centerclass">课时数
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor">{{data.ks_1v1_keshi_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor">{{data.ks_1vd_keshi_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171 ">
+                <view class="defaulColor">{{data.ks_keshi_num}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds tdr wid145">
+                <view class="cell_label centerclass">课时收入
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ks_1v1_class_out_real_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ks_1vd_class_out_real_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor">{{data.ks_class_out_real_money}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds tdr wid145">
+                <view class="cell_label centerclass">同比
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ks_1v1_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ks_1vd_tongbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor">{{data.ks_tongbi_add_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds tdr wid145">
+                <view class="cell_label centerclass">环比
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ks_1v1_huanbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ks_1vd_huanbi_add_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171 ">
+                <view class="defaulColor">{{data.ks_huanbi_add_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main">
+              <view class="tds tdr radius_letB wid145">
+                <view class="cell_label centerclass">平均单价
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ke_1v1_keshi_num_price}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171">
+                <view class="defaulColor ">{{data.ke_1vd_keshi_num_price}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid171 radius_rigB">
+                <view class="defaulColor">{{data.ke_keshi_num_price}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="comm_ovoverflow">
+      <view class="comm_div">
+        <view class="comm_div_title">
+          <text class="h3">03
+          </text>退费数据        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths thr radius_letT wid145">
+              <view class="centerclass">退费人数
+              </view>
+            </view>
+            <view class="ths thr vertical wid145">
+              <view class="centerclass ">退生率
+              </view>
+            </view>
+            <view class="ths thr vertical wid224">
+              <view class="centerclass">退费金额
+              </view>
+            </view>
+            <view class="ths thr vertical radius_rigT wid145">
+              <view class="centerclass ">退费率
+              </view>
+            </view>
+          </view>
+          <block>
+            <view class="table_main">
+              <view class="tds tdr radius_letB wid145">
+                <view class="defaulColor">{{data.s_refund_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid145">
+                <view class="defaulColor ">{{data.s_tuisheng_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid224">
+                <view class="defaulColor ">{{data.s_refund_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid145 radius_rigB">
+                <view class="defaulColor">{{data.s_tuifei_rate}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="comm_ovoverflow">
+      <view class="comm_div">
+        <view class="comm_div_title">
+          <text class="h3">04
+          </text>专兼职分析        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths radius_letT wid145">
+              <view class="centerclass cell_label ">项目
+              </view>
+            </view>
+            <view class="ths thr vertical wid262">
+              <view class="centerclass cell_label ">专职
+              </view>
+            </view>
+            <view class="ths thr vertical wid262 radius_rigT">
+              <view class="centerclass cell_label">兼职
+              </view>
+            </view>
+          </view>
+          <blovk a:if="{{teacherData.campus == '无'}}"> 暂无数据          
+          </blovk>
+          <block a:else>
+            <view class="table_main across">
+              <view class="tds wid145">
+                <view class="cell_label centerclass">教师人数
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{teacherData.zhuan.teacher_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262 ">
+                <view class="defaulColor">{{teacherData.jian.teacher_num}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid145">
+                <view class="cell_label centerclass">上课次数
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{teacherData.zhuan.teacher_keci_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor">{{teacherData.jian.teacher_keci_num}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid145">
+                <view class="cell_label centerclass">上课时长
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{teacherData.zhuan.teacher_keshi_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor">{{teacherData.jian.teacher_keshi_num}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid145">
+                <view class="cell_label centerclass">消耗课时
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{teacherData.zhuan.keshi_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor">{{teacherData.jian.keshi_num}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid145">
+                <view class="cell_label centerclass">课时收入
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{teacherData.zhuan.keshi_money}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor">{{teacherData.jian.keshi_money}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main">
+              <view class="tds radius_letB wid145">
+                <view class="cell_label centerclass">占比
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{teacherData.zhuan.keshi_num_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262 radius_rigB ">
+                <view class="defaulColor">{{teacherData.jian.keshi_num_rate}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="comm_ovoverflow">
+      <view class="comm_div">
+        <view class="comm_div_title">
+          <text class="h3">05
+          </text>资源数据        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths radius_letT wid129">
+              <view class="centerclass cell_label ">项目
+              </view>
+            </view>
+            <view class="ths thr vertical wid129">
+              <view class="centerclass cell_label ">上门量
+              </view>
+            </view>
+            <view class="ths thr vertical wid129">
+              <view class="centerclass cell_label">签单
+              </view>
+            </view>
+            <view class="ths thr vertical wid129">
+              <view class="centerclass cell_label">签单率
+              </view>
+            </view>
+            <view class="ths thr vertical radius_rigT wid129">
+              <view class="centerclass cell_label">占比
+              </view>
+            </view>
+          </view>
+          <block>
+            <view class="table_main across">
+              <view class="tds wid129">
+                <view class="cell_label centerclass">外呼
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_2_shangmeng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_2_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_2_qianyue_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_2_newsign_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid129">
+                <view class="cell_label centerclass">转介绍
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_8_shangmeng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_8_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_8_qianyue_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_8_newsign_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid129">
+                <view class="cell_label centerclass">网络
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_7_shangmeng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_7_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_7_qianyue_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_7_newsign_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid129">
+                <view class="cell_label centerclass">地推
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_1_shangmeng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_1_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_1_qianyue_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_1_newsign_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main across">
+              <view class="tds wid129">
+                <view class="cell_label centerclass">新媒体
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_16_shangmeng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_16_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_16_qianyue_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_16_newsign_rate}}
+                </view>
+              </view>
+            </view>
+            <view class="table_main">
+              <view class="tds  radius_letB wid129">
+                <view class="cell_label centerclass">其他
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_99_shangmeng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129">
+                <view class="defaulColor ">{{data.source_from_99_zhaosheng}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 ">
+                <view class="defaulColor">{{data.source_from_99_qianyue_rate}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid129 radius_rigB">
+                <view class="defaulColor">{{data.source_from_99_newsign_rate}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="comm_ovoverflow">
+      <view class="comm_div">
+        <view class="comm_div_title">
+          <text class="h3">06
+          </text>学员-年级维度        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths radius_letT wid145">
+              <view class="centerclass cell_label ">年级维度
+              </view>
+            </view>
+            <view class="ths thr vertical wid262">
+              <view class="centerclass cell_label ">学生量
+              </view>
+            </view>
+            <view class="ths thr vertical wid262 radius_rigT">
+              <view class="centerclass cell_label">占比
+              </view>
+            </view>
+          </view>
+          <block a:for="{{gradeData}}">
+            <view class="table_main {{item.across}}">
+              <view class="tds wid145 {{item.classL}}">
+                <view class="cell_label centerclass">{{item.f_grade}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{item.student_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262  {{item.classL}}">
+                <view class="defaulColor">{{item.student_num_zb}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="comm_ovoverflow">
+      <view class="comm_div footer">
+        <view class="comm_div_title">
+          <text class="h3">07
+          </text>学员-科目维度        
+        </view>
+        <view class="tables">
+          <view class="table_header across">
+            <view class="ths radius_letT wid145">
+              <view class="centerclass cell_label">科目维度
+              </view>
+            </view>
+            <view class="ths thr vertical wid262">
+              <view class="centerclass cell_label">学生量
+              </view>
+            </view>
+            <view class="ths thr vertical wid262 radius_rigT">
+              <view class="centerclass cell_label">占比
+              </view>
+            </view>
+          </view>
+          <block a:for="{{subjectData}}">
+            <view class="table_main {{item.across}}">
+              <view class="tds wid145 {{item.classL}}">
+                <view class="cell_label centerclass">{{item.f_subject}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262">
+                <view class="defaulColor ">{{item.student_num}}
+                </view>
+              </view>
+              <view class="tds tdr vertical wid262 {{item.classR}}">
+                <view class="defaulColor">{{item.student_num_zb}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

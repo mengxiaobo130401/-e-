@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="banner">                              
+    <image src="{{banner}}"  mode="scaleToFill" />
+  </view>
+  <view class="content">
+    <view class="content_body">
+      <view class="content_body_title">我的工作台                                     
+      </view>
+      <view class="content_body_block">
+        <view class="content_body_block_child" a:for="{{arr.workbench}}" data-path="item.path" onTap="pathClick">
+          <image src="{{url+item.icon}}" mode="aspectFit" class="content_body_block_child_image"/>
+          <view>{{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content_body">
+      <view class="content_body_title">数据查询                                     
+      </view>
+      <view class="content_body_block">
+        <view class="content_body_block_child" a:for="{{arr.dataQuery}}" data-path="{{item.path}}" onTap="pathClick">
+          <image src="{{url+item.icon}}" mode="aspectFit" class="content_body_block_child_image"/>
+          <view>{{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content_body">
+      <view class="content_body_title">排行榜                                     
+      </view>
+      <view class="content_body_block">
+        <view class="content_body_block_child" a:for="{{arr.rankingList}}" data-path="{{item.path}}" onTap="pathClick">
+          <image src="{{url+item.icon}}" mode="aspectFit" class="content_body_block_child_image"/>
+          <view>{{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content_body footer">
+      <view class="content_body_title">校区报告                                     
+      </view>
+      <view class="content_body_block">
+        <view class="content_body_block_child" a:for="{{arr.campusReport}}" data-path="{{item.path}}"  onTap="pathClick">
+          <image src="{{url+item.icon}}" mode="aspectFit" class="content_body_block_child_image"/>
+          <view>{{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content_body footer">
+      公司：{{GM.city}}，校区：{{GM.campus}}，角色：{{GM.role}}，ID：{{GM.userid}}
+    </view>
+  </view>
+  <button type="primary" class="address" onTap="logOut">退出</button>
+</view>

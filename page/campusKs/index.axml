@@ -1,0 +1,49 @@
+<view>
+  <view style="padding:12rpx;">
+    <view class="datePicker" catchTap="tapmin">{{min_ymd}}
+    </view>
+    <view class="datePicker" catchTap="tapmax">{{max_ymd}}
+    </view>
+    <button type="primary" onTap="search">搜索</button>
+  </view>
+  <view class='table'>
+    <view class='tr bg-w'>
+      <view class="th sortW">
+        <view class='centerclass'>排名
+        </view>
+      </view>
+      <view class="th">
+        <view class='centerclass '>校区
+        </view>
+      </view>
+      <view class="th">
+        <view class='centerclass '>课时数
+        </view>
+      </view>
+      <view class="th">
+        <view class='centerclass '>课时收入
+        </view>
+      </view>
+    </view>
+    <block >
+      <view class='tr bg-g' a:for="{{data}}">
+        <view class='td sortW'>
+          <view class="defaulColor">{{item.sort}}
+          </view>
+        </view>
+        <view class='td '>
+          <view class="defaulColor ">{{item.f_campus}}
+          </view>
+        </view>
+        <view class='td'>
+          <view class="defaulColor">{{item.f_sum_student_keshi}}
+          </view>
+        </view>
+        <view class='td'>
+          <view class="defaulColor">{{item.f_nbf_keshi_money}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<view>
+  <block a:for="{{list}}">
+    <button class="monthBtn" type="default" onTap="skip" plain data-path="{{item.path}}">{{item.name}}</button>
+  </block>
+</view>

@@ -1,0 +1,25 @@
+<view class="content">
+  <view class="container">
+    <view>
+      <view class='logoWrap'>
+        <view class='logo '>
+          <image class="loginImg" src="{{logoimg}}"></image>
+        </view>
+        <view class='title'>智能校区</view>
+      </view>
+      <view class='loginWrap'>
+        <view class="section inputWrap">
+          <text class='parent_icon phone'></text>
+          <input type="text" value="{{param.username}}" onInput="userName" placeholder="登录账号"/>
+        </view>
+        <view class="section inputWrap">
+          <text class='parent_icon possword'></text>
+          <input password class='code_input' type="text" value="{{param.passwd}}" onInput="passwd" placeholder="登录密码"/>
+        </view>
+        <view>
+          <button type="primary" onTap='loginSystem'>登录</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
